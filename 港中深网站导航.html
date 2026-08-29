@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>港中深 · 常用网站导航</title>
+<style>
+  :root {
+    --bg1: #0e2a5c;
+    --bg2: #123c86;
+    --accent: #6ea8ff;
+    --card: rgba(255, 255, 255, 0.96);
+    --text: #1c2b45;
+    --sub: #5b6b85;
+    --border: #d7e0f2;
+    --ring: #2f6fd8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+    background: linear-gradient(160deg, var(--bg1) 0%, var(--bg2) 60%, #1a4fa0 100%);
+    min-height: 100vh;
+    padding: 40px 20px 60px;
+    color: var(--text);
+  }
+  .wrap { max-width: 980px; margin: 0 auto; }
+  header { text-align: center; color: #fff; margin-bottom: 34px; }
+  header .badge {
+    display: inline-block; font-size: 13px; letter-spacing: 2px;
+    border: 1px solid rgba(255,255,255,.45); color: #dce8ff;
+    padding: 4px 14px; border-radius: 999px; margin-bottom: 14px;
+  }
+  header h1 { font-size: 30px; font-weight: 700; letter-spacing: 1px; }
+  header p { margin-top: 10px; color: #c8d9ff; font-size: 14px; }
+  .search-box { text-align: center; margin-bottom: 26px; }
+  .search-box input {
+    width: min(420px, 90%);
+    padding: 11px 18px; border-radius: 999px; border: none;
+    font-size: 15px; outline: none;
+    background: rgba(255,255,255,.94);
+    box-shadow: 0 4px 16px rgba(0,0,0,.18);
+  }
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+  }
+  .card {
+    display: block; text-decoration: none; color: inherit;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px; padding: 22px 20px 18px;
+    box-shadow: 0 6px 18px rgba(0, 20, 60, .22);
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 20, 60, .3);
+    border-color: var(--ring);
+  }
+  .card:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px; }
+  .card .icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 23px; margin-bottom: 12px;
+    background: linear-gradient(135deg, #eaf1ff, #d9e6ff);
+  }
+  .card h2 { font-size: 18px; font-weight: 700; margin-bottom: 3px; }
+  .card .url {
+    font-size: 12px; color: var(--ring); font-family: Consolas, monospace;
+    word-break: break-all; margin-bottom: 9px;
+  }
+  .card p { font-size: 13.5px; color: var(--sub); line-height: 1.65; }
+  .card .go {
+    display: inline-block; margin-top: 12px; font-size: 12.5px; color: var(--ring); font-weight: 600;
+  }
+  .none { display: none; text-align: center; color: #fff; margin-top: 30px; font-size: 15px; }
+  footer { text-align: center; margin-top: 40px; color: #9fb8e8; font-size: 12.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="badge">CUHK-SHENZHEN · 学生常用</span>
+    <h1>港中深 · 常用网站导航</h1>
+    <p>点击任意卡片即可打开对应网站</p>
+  </header>
+
+  <div class="search-box">
+    <input id="q" type="text" placeholder="搜索：如&quot;选课&quot;、&quot;邮箱&quot;、&quot;密码&quot;…" autocomplete="off">
+  </div>
+
+  <div class="grid" id="grid">
+    <a class="card" href="https://registry.cuhk.edu.cn/" target="_blank" rel="noopener" data-kw="教务 注册 学籍 成绩单 证明">
+      <div class="icon">🎓</div>
+      <h2>1. 教务处</h2>
+      <div class="url">registry.cuhk.edu.cn</div>
+      <p>注册与教务事务：学籍管理、注册报到、成绩单与在读证明申请、选课安排与教务公告等。</p>
+      <span class="go">打开网站 →</span>
+    </a>
+
+    <a class="card" href="https://bb.cuhk.edu.cn/" target="_blank" rel="noopener" data-kw="课程 课件 作业 测验 通知 blackboard">
+      <div class="icon">📚</div>
+      <h2>2. Blackboard 课程平台</h2>
+      <div class="url">bb.cuhk.edu.cn</div>
+      <p>每门课程的学习平台：下载课件、查看课程通知、提交作业、参加在线测验与讨论。</p>
+      <span class="go">打开网站 →</span>
+    </a>
+
+    <a class="card" href="https://myid.cuhk.edu.cn/" target="_blank" rel="noopener" data-kw="账号 密码 myid 激活 找回 修改 解锁">
+      <div class="icon">🔐</div>
+      <h2>3. MyID 账号密码管理</h2>
+      <div class="url">myid.cuhk.edu.cn</div>
+      <p>统一账号管理：首次激活校园账号、修改/找回密码、解锁被锁定的账号。</p>
+      <span class="go">打开网站 →</span>
+    </a>
+
+    <a class="card" href="https://portal.office.com/" target="_blank" rel="noopener" data-kw="邮箱 邮件 outlook office 365 办公">
+      <div class="icon">✉️</div>
+      <h2>4. 学生邮箱 Office365</h2>
+      <div class="url">portal.office.com</div>
+      <p>学生邮箱（@link.cuhk.edu.cn）与 Office 办公套件：收发邮件、OneDrive 云盘、Word/Excel/PowerPoint 等。</p>
+      <span class="go">打开网站 →</span>
+    </a>
+
+    <a class="card" href="https://sis.cuhk.edu.cn/" target="_blank" rel="noopener" data-kw="选课 注册 成绩 GPA 学费 缴费">
+      <div class="icon">📝</div>
+      <h2>5. SIS 学生信息系统</h2>
+      <div class="url">sis.cuhk.edu.cn</div>
+      <p>学生信息管理：网上选课与课程注册、查询成绩与 GPA、学费信息、个人资料维护。</p>
+      <span class="go">打开网站 →</span>
+    </a>
+
+    <a class="card" href="https://myportal.cuhk.edu.cn/" target="_blank" rel="noopener" data-kw="一站式 办事大厅 总入口 服务 门户 myportal">
+      <div class="icon">🏛️</div>
+      <h2>6. MyPortal 一站式办事大厅</h2>
+      <div class="url">myportal.cuhk.edu.cn</div>
+      <p>校内服务总入口：统一登录后可从门户进入教务处、Blackboard、SIS 等各类系统与办事服务。</p>
+      <span class="go">打开网站 →</span>
+    </a>
+  </div>
+
+  <div class="none" id="none">没有找到匹配的网站，请换个关键词试试。</div>
+
+  <footer>提醒：账号密码统一在 MyID 管理 · <span id="year"></span> 港中深网站导航（本地页面，双击即用）</footer>
+</div>
+
+<script>
+  const q = document.getElementById('q');
+  const cards = Array.from(document.querySelectorAll('.card'));
+  const none = document.getElementById('none');
+  q.addEventListener('input', () => {
+    const t = q.value.trim().toLowerCase();
+    let shown = 0;
+    cards.forEach(c => {
+      const hit = !t || (c.textContent + ' ' + c.dataset.kw).toLowerCase().includes(t);
+      c.style.display = hit ? '' : 'none';
+      if (hit) shown++;
+    });
+    none.style.display = shown === 0 ? 'block' : 'none';
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
